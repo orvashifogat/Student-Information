@@ -1,0 +1,50 @@
+#include <stdio.h>
+struct student                  
+    {
+        char name[50];          // structure member1
+        int id;                 // structure member2
+        char branch[50];        // structure member3
+        int age;                // structure member4
+    } std[100];                 // structure variable
+int main()
+{
+	int n,i;
+	printf("Enter number of students data you want to enter:\n");
+	scanf("%d",&n);
+	system("cls");
+	printf("Enter Student Information\n");      
+    printf("----------------------------\n");
+	for(i=0;i < n;i++)
+	{
+    //Taking information from keyboard and store it by using structure variable std//
+
+    printf("Enter name of the student %d :",(i+1));
+    scanf("%s",std[i].name);               
+   
+    printf("Enter Reg.No :");
+    scanf("%d",&std[i].id);
+    
+    printf("Enter branch name :");
+    scanf("%s",std[i].branch);
+    
+    printf("Enter age :");
+    scanf("%d",&std[i].age);
+      printf("\n");
+
+}
+	system("cls");
+    
+    /*Displaying student information */
+     //Accessing information by using structure variable std
+    printf("Displaying Student Information\n");
+    printf("----------------------------\n");
+    for(i=0; i < n;i++)
+    {
+    printf(" Name of the student %d : %s\n",(i+1),std[i].name);       
+    printf(" Reg.NO: %d \n", std[i].id);
+    printf(" Branch: %s \n", std[i].branch);
+    printf(" Age: %d\n", std[i].age);
+    printf("\n");
+	}
+    return 0;
+}
